@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;700&display=swap');
+
+body {
+    background-color: rgba(182, 199, 213, 0.488);
+    font-family: 'Source Code Pro',  monospace;
+}
+
+header {
+    background-color: rgb(0, 83, 128);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header h1 {
+    width: 100%;
+    text-align: center;
+    color: rgb(239, 239, 208);
+    font-size: 60px;
+    margin: 5px;
+    letter-spacing: 10px;
+    font-weight: 200;
+}
+
+header h3 {
+    text-align: center;
+    margin-left: 40px; 
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#landingScreen h1 {
+    font-weight: 200;
+    font-size: 40px;
+}
+
+section {
+    margin: 30px;
+    font-size: 30px;
+}
+
+section p {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 100px;
+    flex-shrink: 3;
+}
+
+section input {
+    height: 30px;
+    width: 200px;
+    font-size: 30px;
+    flex-shrink: 1;
+}
+
+#players, #table {
+    display: none;
+}
+
+.player1, #player1 p {
+    background-color: rgb(119, 69, 165);
+}
+
+.player2, #player2 p, #computer p {
+    background-color: rgb(83, 128, 0);
+}
+
+#table {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+#table h2 {
+    margin: 5px;
+    font-size: 35px; 
+}
+
+table {
+    border: 5px solid rgba(128, 128, 128, 0.687);
+    background-color: white;
+    padding: 8px;
+}
+
+td {
+    background-color: rgb(239, 239, 208);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+td:hover {
+    border: 2px dashed black;
+}

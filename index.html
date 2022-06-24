@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Annie's Connect Four</title>
+</head>
+<body onload="getRandomPlayer()">
+    <header>
+        <h1 id="test">CONNECT FOUR</h1>
+        <h3 id="newSingleGame">Start New Single-Player Game</h3>
+        <h3 id="newMultiGame">Start New Multi-Player Game</h3>
+    </header>
+    <main>
+        <div id="landingScreen">
+            <h1>Choose a game mode to get started!</h1>
+        </div>
+        <section id="players">
+            <div id="player1">
+                <label>Player 1 Name:</label>
+                <input>
+                <p></p>
+            </div>
+            <br>
+            <div id="player2">
+                <label>Player 2 Name:</label>
+                <input>
+                <p></p>
+            </div>
+            <div id="computer">
+                <label>OPPONENT: COMPUTER</label>
+                <p></p>
+            </div>
+        </section>
+        <section id="table">
+            <h2 id="turn">Player 1, you will go first!</h2>
+            <table></table>
+        </section>
+    </main>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
