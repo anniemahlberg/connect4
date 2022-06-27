@@ -86,6 +86,10 @@ function checkIfFull(event) {
     if (currentCell.tagName === "TD" && currentCell.className === "" && document.getElementById("turn").innerText !== `${player1Name} WINS!!!` && document.getElementById("turn").innerText !== `${player2Name} WINS!!!`) {
         dropChip(event);
         changePlayer(event);
+        verticalWinner();
+        horizontalWinner();
+        diagonalWinner();
+        tieGame();
     }
 }
 
@@ -101,7 +105,7 @@ function dropChip(event) {
         } else {
             continue;
         }
-    }  
+    }
 }
 
 // START NEW GAME BUTTONS
@@ -173,6 +177,11 @@ function computerDropChip() {
         if (document.getElementById("turn").innerText !== `${player1Name} WINS!!!` && document.getElementById("turn").innerText !== `Computer WINS!!!`) {
             document.getElementById("turn").innerText = `${player1Name}, your turn!`
         }
+
+        verticalWinner();
+        horizontalWinner();
+        diagonalWinner();
+        tieGame();
     }
 
 }
@@ -186,8 +195,6 @@ function delayComputer() {
 }
 
 // VERTICAL WINNER
-
-table.addEventListener('click', verticalWinner)
 
 function verticalWinner() {
     setPlayerName();
@@ -216,8 +223,6 @@ function verticalWinner() {
 }
 
 // HORIZONTAL WINNER
-
-table.addEventListener('click', horizontalWinner)
 
 function horizontalWinner() {
     setPlayerName();
@@ -249,8 +254,6 @@ function horizontalWinner() {
 }
 
 // DIAGONAL WINNER
-
-table.addEventListener('click', diagonalWinner)
 
 function diagonalWinner() {
     setPlayerName();
@@ -461,8 +464,6 @@ function diagonalWinner() {
 }
 
 // TIE GAME
-
-table.addEventListener("click", tieGame)
 
 function tieGame() {
     let tally = 0;
